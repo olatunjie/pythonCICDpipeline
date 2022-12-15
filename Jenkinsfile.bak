@@ -1,5 +1,4 @@
-    node {
-	def application = "pythonappcicdpipeline"
+    def application = "pythonappcicdpipeline"
     def dockerhubaccountid = "coupe247"
     stage('Clone repository') 
 	{
@@ -29,4 +28,3 @@
         // remove old docker images
         sh("docker rmi ${dockerhubaccountid}/${application}:latest -f")
     }
-	}
